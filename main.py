@@ -20,7 +20,6 @@ g = nx.read_edgelist(f"data/{file_name}.txt",create_using=nx.Graph(), nodetype =
 # dataset : n_triangles
 # zachary : 45 YYY
 # example : 5 YYY
-# facebook : 1612010 YYN
 # roadpa : 67150 YYN
 # astroph : 1351441 YNN
 # email : 105461 YNN

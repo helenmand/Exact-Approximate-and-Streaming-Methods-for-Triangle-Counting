@@ -1,10 +1,9 @@
 from itertools import combinations
 import networkx as nx
 import numpy as np
-from tqdm import tqdm
-# exact algorithms to find triangle count in a graph
 
- # all triplets
+# exact algorithms to find triangles in a graph
+# all triplets
 def all_triplets(G):
     num_of_triangles = 0
 
@@ -13,19 +12,6 @@ def all_triplets(G):
 
         if G.has_edge(x, y) and G.has_edge(y, z) and G.has_edge(x, z):
             num_of_triangles += 1
-    return num_of_triangles
-
-def all_triplets_o(G, output_file):
-    num_of_triangles = 0
-
-    with open(output_file, 'w') as file:
-        for triplet in combinations(G.nodes, 3):
-            x, y, z = sorted(triplet)
-
-            if G.has_edge(x, y) and G.has_edge(y, z) and G.has_edge(x, z):
-                file.write(f"{x} {y} {z}\n")
-                num_of_triangles += 1
-
     return num_of_triangles
 
 # node iterator
@@ -78,7 +64,7 @@ def compact_forward(G):
 
     sorted_nodes = np.array(nodes)[np.argsort(degrees)[::-1]]
     node_dict = dict(zip(sorted_nodes, range(len(sorted_nodes)))) # node_id : index
-    
+
     for node in sorted_nodes: # 3
         # 2
         neighbors = list(G.neighbors(node))
