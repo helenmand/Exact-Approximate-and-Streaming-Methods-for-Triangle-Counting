@@ -1,4 +1,5 @@
 from itertools import combinations
+import time
 import networkx as nx
 import numpy as np
 
@@ -87,10 +88,11 @@ def compact_forward(G):
                 # 3aa
                 v_ = next(n)
                 u_ = next(nn)
-                
+
                 while n.__length_hint__() > 0 and nn.__length_hint__() > 0 \
                       and node_dict[u_] < node_dict[node] and \
                           node_dict[v_] < node_dict[node] : # 3ab
+    
                     if node_dict[u_] < node_dict[v_]: # 3aba
                         u_ = next(nn)
                     elif node_dict[u_] > node_dict[v_]: # 3abb
