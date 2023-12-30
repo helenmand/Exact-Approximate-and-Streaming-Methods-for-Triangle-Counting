@@ -19,11 +19,11 @@ def all_triplets(G):
 def node_iter(G):
     num_of_triangles = 0
 
-    for node in G.nodes:
-        neighbors = list(G.neighbors(node))
+    for node in sorted(G.nodes):
+        neighbors = sorted(list(G.neighbors(node)))
         
         if len(neighbors) > 1:
-            neighbors_combinations = combinations(neighbors, 2)
+            neighbors_combinations = sorted(combinations(neighbors, 2))
             
             for x, y in neighbors_combinations:
                 if G.has_edge(x, y) or G.has_edge(y, x):

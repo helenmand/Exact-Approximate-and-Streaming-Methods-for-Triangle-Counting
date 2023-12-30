@@ -23,11 +23,12 @@ g = nx.read_edgelist(f"data/{file_name}.txt",create_using=nx.Graph(), nodetype =
 # zachary : 45 YYN
 # example : 5 YYY
 # roadpa : 67150 YYN
-# astroph : 1351441 YNN
-# email : 105461 YNN
+# astroph : 1351441 YYN
+# email : 105461 YYN
 """
 
-g = nx.read_edgelist(f"data/zachary.txt",create_using=nx.Graph(), nodetype = int)
+g = nx.read_edgelist(f"data/roadpa.txt",create_using=nx.Graph(), nodetype = int)
+g.remove_edges_from(nx.selfloop_edges(g)) # removing self-loops (if any)
 
 # zachary missing 6 7 17 triangle
 print(e.all_triplets(G=g))
