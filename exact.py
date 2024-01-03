@@ -31,32 +31,7 @@ def node_iter(G):
 
     return num_of_triangles//3
 
-# compact forward
-def compact_forward_gpt(G):
-    # simplified by chatgpt 
-    num_of_triangles = 0
-    
-    nodes = G.nodes()
-    degrees = np.array([G.degree(node) for node in nodes])
-
-    sorted_nodes = np.array(nodes)[np.argsort(degrees)[::-1]]
-
-    for node in sorted_nodes:
-        neighbors = list(G.neighbors(node))
-        neighbors_degrees = np.array([G.degree(n) for n in neighbors])
-
-        sorted_neighbors = np.array(neighbors)[np.argsort(neighbors_degrees)[::-1]]
-
-        for i in range(len(sorted_neighbors)):
-            u = sorted_neighbors[i]
-            for j in range(i + 1, len(sorted_neighbors)):
-                v = sorted_neighbors[j]
-
-                if G.has_edge(u, v):
-                    num_of_triangles += 1
-
-    return num_of_triangles // 3
-
+# compact forward - needs debugging
 def compact_forward(G):
     num_of_triangles = 0
     # 1

@@ -7,8 +7,6 @@ def triest_base(G, M):
     t = 0
     global_estimate = 0
 
-    sample = nx.empty_graph()
-
     for edge in G.edges(): 
         t+=1
 
