@@ -8,8 +8,8 @@ import triest as t
 # dataset : n_triangles
 # zachary : 45 
 # example : 5 
-# roadpa : 67150 - med
-# astroph : 1351441 - big
+# roadpa : 67150 - big
+# astroph : 1351441 - med
 # email : 105461 - small
 """
 
