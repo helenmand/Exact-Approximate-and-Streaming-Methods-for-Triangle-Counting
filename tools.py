@@ -23,8 +23,8 @@ def flip_biased_coin(M,t):
   else:
       return False
 
-def sample_edge(sample,u,v,M,t):
-  if t<=M:
+def sample_edge(sample, M, t):
+  if t <= M:
     return True
   elif flip_biased_coin(M,t):
     random_edge = random.choice(list(sample.edges))
@@ -34,7 +34,7 @@ def sample_edge(sample,u,v,M,t):
   return False
 
 def sample_edge_base(sample, M, t, u, v, global_est):
-  if t<=M:
+  if t <= M:
     return True, global_est
   elif flip_biased_coin(M,t):
     random_edge = random.choice(list(sample.edges))
@@ -44,7 +44,7 @@ def sample_edge_base(sample, M, t, u, v, global_est):
   
   return False, global_est
 
-def update_counters_base(sample, u, v, global_est, op_type):
+def update_counters_base(sample, u, v, global_est, val):
   if (u in sample.nodes) & (v in sample.nodes):
     common_neighbors = list(sorted(nx.common_neighbors(sample, u, v)))
     
@@ -52,7 +52,7 @@ def update_counters_base(sample, u, v, global_est, op_type):
       return global_est
 
     for _ in common_neighbors:
-      global_est += op_type
+      global_est += val
   
   return global_est 
 

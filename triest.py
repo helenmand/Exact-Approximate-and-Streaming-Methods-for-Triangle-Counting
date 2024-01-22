@@ -12,15 +12,15 @@ def triest_base(G, M):
         t+=1
 
         res = tools.sample_edge_base(sample=sample, M=M, t=t,
-                               u=edge[0], v=edge[1], 
-                               global_est=global_estimate)
+                                    u=edge[0], v=edge[1], 
+                                    global_est=global_estimate)
         if res[0]:
             global_estimate = res[1]
             sample.add_edge(edge[0], edge[1])
             global_estimate = tools.update_counters_base(sample=sample,
-                                                u=edge[0], v=edge[1],
-                                                global_est=global_estimate,
-                                                op_type=1)
+                                                        u=edge[0], v=edge[1],
+                                                        global_est=global_estimate,
+                                                        val=1)
 
     return global_estimate
 
