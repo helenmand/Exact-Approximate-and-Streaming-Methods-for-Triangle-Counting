@@ -36,7 +36,6 @@ def triest_impr(G, M):
                                                     M=M, t=t,
                                                     global_est=global_estimate)
        if tools.sample_edge(sample=sample,
-                      u=edge[0], v=edge[1],
                       M=M, t=t):
           sample.add_edge(edge[0], edge[1])
         

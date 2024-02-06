@@ -1,6 +1,7 @@
 import networkx as nx
 import random
 
+# fucntions for DOULION
 def coin_flip(head_prob):
     coin_toss = random.random()
     
@@ -15,6 +16,7 @@ def spasify_graph(G, p):
 
     return sparse_graph 
 
+# functions for TRIEST
 def flip_biased_coin(M,t):
   head_prob = random.random()
   
@@ -40,6 +42,7 @@ def sample_edge_base(sample, M, t, u, v, global_est):
     random_edge = random.choice(list(sample.edges))
     sample.remove_edge(*random_edge)
     global_est = update_counters_base(sample, u, v, global_est, -1)
+    
     return True, global_est
   
   return False, global_est
