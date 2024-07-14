@@ -11,7 +11,7 @@ import exact as e
 # astroph : 1351441 - med
 # email : 105461 - small
 """
-g = nx.read_edgelist(f"data/livej.txt",create_using=nx.Graph(), nodetype = int)
+g = nx.read_edgelist(f"data/zachary.txt",create_using=nx.Graph(), nodetype = int)
 g.remove_edges_from(nx.selfloop_edges(g)) # removing self-loops (if any)
 
 #print(e.all_triplets(G=g))

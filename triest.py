@@ -1,7 +1,6 @@
 import networkx as nx 
 import tools
 
-
 def triest_base(G, M):
     sample = nx.empty_graph()
     t = 0
