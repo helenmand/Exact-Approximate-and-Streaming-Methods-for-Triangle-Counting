@@ -1,4 +1,5 @@
 # Algorithmic Triangle Counting: Exact, Approximate, and Streaming Methods
+This assignment was completed for the course Managing and Mining Complex Networks, part of the MSc program in Data and Web Science at AUTh, during the fall semester of 2023.
 
 ## Overview
 We implemented and evaluated three algorithms for triangle counting in graphs: DOULION, TRIÈST-base, and TRIÈST-improved. 
@@ -17,9 +18,5 @@ TRIÈST-improved consistently outperformed TRIÈST-base in terms of triangle cou
 Overall, TRIÈST-improved showed significantly lower absolute error in predictions compared to the base version, making it a more reliable choice for accurate triangle counting with limited memory resources.
 
 
-
-
-
-
-
-
+### Authors
+Eleni Mandana and Dimitrios Markou.
