@@ -17,6 +17,16 @@ TRIÈST-improved consistently outperformed TRIÈST-base in terms of triangle cou
 
 Overall, TRIÈST-improved showed significantly lower absolute error in predictions compared to the base version, making it a more reliable choice for accurate triangle counting with limited memory resources.
 
+The plots below summarize the results for DOULION (first figure) and for TRIÈST-base and TRIÈST-improved (second figure)
+
+| ![Doulionres](https://github.com/helenmand/Exact-Approximate-and-Streaming-Methods-for-Triangle-Counting/blob/main/plots/doulionplots.png) | 
+|:--:| 
+| *Figure 1. Results for DOULION* |
+
+| ![Triestres](https://github.com/helenmand/Exact-Approximate-and-Streaming-Methods-for-Triangle-Counting/blob/main/plots/triestplots.png) | 
+|:--:| 
+| *Figure 2. Results for TRIEST-base and TRIEST-improved* |
+
 
 ### Authors
 Eleni Mandana and Dimitrios Markou.
